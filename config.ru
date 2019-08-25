@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 
 require 'dotenv'
@@ -12,8 +14,8 @@ Thread.new do
   begin
     ScriBot::Bot.run
   rescue StandardError => e
-    STDERR.puts "ERROR: #{e}"
-    STDERR.puts e.backtrace
+    warn "ERROR: #{e}"
+    warn e.backtrace
     raise e
   end
 end

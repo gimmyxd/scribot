@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ScriBot
   module Commands
     class Test < SlackRubyBot::Commands::Base
